@@ -217,88 +217,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             
         }
         
-    }
+    }*********
 
-   /* @objc func decrementRestTimer(){
-        
-        
-        restCountdownLabel.text = String(restSecondsRemaining)
-        
-        
-        stopRestDisplay.isHidden=false
-        restRunning=true
-          restSecondsRemaining -= 1
-        
-        restCountdownLabel.text = String(restSecondsRemaining)
-        
-        roundsCountdown.isHidden=false
-        roundsCountdown.text=String(roundsRemainingSaved)
-                 
-        if restSecondsRemaining == 0 {
-            
-            countdownLabel.isHidden = false
-                   countdownLabel.text = String(secondsRemainingSaved)
-      
-            timer?.invalidate();
-            restCountdownLabel.isHidden=true
-            stopRestDisplay.isHidden=true
-            
-            if soundEnabled == true{
-                              // play sound
-                              audioPlayer?.play()
-                              }
-                              
-                              else {
-                              // vibrate
-                              AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                              }
-            
-            if roundsRemainingSaved > 0{
-                roundsRemainingSaved -= 1
-                
-roundsCountdown.text=String(roundsRemainingSaved)
-                
-                if roundsRemainingSaved == 0{
-                    self.performSegue(withIdentifier: "Test", sender: self)
-                     timer?.invalidate();
-                    
-                    if soundEnabled == true{
-                    // play sound
-                    audioPlayer1?.play()
-                    }
-                    
-                    else {
-                    // vibrate
-                    AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                    }
-                }
-                
-            if secondsRemainingSaved > 0 && roundsRemainingSaved > 0{
-                
-                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(decrementSaved), userInfo: nil, repeats: true)
-            }
-            
-       // restCountdownLabel.isHidden = true
-           
-         //   restSecondsRemaining = 1
-            
-            if soundEnabled == true{
-                 // play sound
-                 audioPlayer1?.play()
-                 }
-            
-            else {
-                 // vibrate
-                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-                    }
-                    
-                
-                
-        }
-        
-        
-        }
-    }*/
+   
     
     @objc func decrementRounds(){
             
@@ -307,41 +228,6 @@ roundsCountdown.text=String(roundsRemainingSaved)
            }
     
     
-    /*@objc func decrementTimer() {
-         
-        countdownLabel.text = String(secondsRemaining)
-        
-        workRunning=true
-         secondsRemaining -= 1
-    countdownLabel.text = String(secondsRemaining)
-        
-    
-        if secondsRemaining == 0 {
-    // unschedule timer and reset seconds remaining
-            timer?.invalidate();
-            countdownLabel.isHidden=true
-            stopActive.isHidden=true
-    secondsRemaining = 1
-    // reset picker
-  //picker1.selectRow(0, inComponent: 0, animated: false)
-    // hide countdown label
-    //countdownLabel.isHidden = true
-        
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(decrementRestTimer), userInfo: nil, repeats: true)
-    // unhide picker and button
-   // picker1.isHidden = false
-   // timerButton.isHidden = false
-     //   workLabel.isHidden = false
-    // sound the alarm
-            if soundEnabled == true{
-        // play sound
-        audioPlayer1?.play()
-        } else {
-        // vibrate
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        }
-    }
-  }*/
 
    @IBAction func stopWork(_ sender: Any) {
     
@@ -434,15 +320,7 @@ roundsCountdown.text=String(roundsRemainingSaved)
         stopRestDisplay.isHidden=true
         
         hideResume()
-     
-        // Rest time picker
-        
-      //picker.dataSource = self
-        //picker.delegate = self
-        // work timer picker
-        
-        //picker1.dataSource = self
-        //picker1.delegate = self
+    
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
